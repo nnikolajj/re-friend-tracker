@@ -45,6 +45,14 @@
                         "width": 2
                     },
                     {
+                        "id": "activity",
+                        "type": "autocomplete",
+                        "name": "Activity",
+                        "url": "/activity",
+                        "form": "ActivityForm",
+                        "width": 2
+                    },
+                    {
                         "id": "birthdate",
                         "type": "date",
                         "name": "Birthday",
@@ -125,9 +133,9 @@
                 ]
             },
             {
-                "id": "AddActivityForm",
+                "id": "ActivityForm",
                 "title": "Activity",
-                "url": "/friend/:friendKey/activity",
+                "url": "/activity",
                 "formFieldList": [
                     {
                         "id": "activity",
@@ -179,6 +187,13 @@
                         "icon": "fa-weixin",
                         "color": "wisteria",
                         "page": "groupspage"
+                    },
+                    {
+                        "type": "button",
+                        "name": "Activity",
+                        "icon": "fa-weixin",
+                        "color": "orange",
+                        "page": "activitypage"
                     }
                 ]
             },
@@ -260,6 +275,33 @@
                         "url": "/group",
                         "form": {
                             "form": "GroupForm"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "activitypage",
+                "elementList": [
+                    {
+                        "type": "backbutton"
+                    },
+                    {
+                        "type": "newButton",
+                        "name": "NewActivity",
+                        "icon": "fa-weixin",
+                        "color": "green",
+                        "form": {
+                            "form": "ActivityForm"
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "icon": "fa-weixin",
+                        "color": "orange",
+                        "search": true,
+                        "url": "/activity",
+                        "form": {
+                            "form": "ActivityForm"
                         }
                     }
                 ]
